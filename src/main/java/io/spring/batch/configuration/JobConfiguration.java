@@ -35,14 +35,14 @@ import org.springframework.batch.item.xml.StaxEventItemReader;
 import org.springframework.batch.item.xml.StaxEventItemWriter;
 import org.springframework.batch.support.transaction.ResourcelessTransactionManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.oxm.Marshaller;
+import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.oxm.xstream.XStreamMarshaller;
 import org.springframework.transaction.PlatformTransactionManager;
 
@@ -57,8 +57,6 @@ import java.util.Map;
 
 @Configuration
 @EnableBatchProcessing
-@EnableJpaRepositories("io.spring.repositories")
-@ComponentScan("io.spring.batch")
 @ImportResource("classpath:/config/config-beans.xml")
 public class JobConfiguration {
 
@@ -84,10 +82,14 @@ public class JobConfiguration {
 	@Autowired
 	public ThemeService themeService;
 
-
-
 	@Autowired
-	public JobItemReader jobItemReader;
+	@Qualifier("modelFile")
+	public ModelFileItemReader modelFileItemReader;
+
+
+
+	/*@Autowired
+	public JobItemReader jobItemReader;*/
 
 
 	@Bean
@@ -132,10 +134,13 @@ public class JobConfiguration {
 
 		List<Book> list = bookService.findAll();
 
+
+
+
 		for (Book item : list ) {
 
+			System.out.println("X" + item);
 
-			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXX" + item);
 
 		}
 
@@ -143,7 +148,7 @@ public class JobConfiguration {
 		return new JobItemReader(list);
 	}
 
-	@Bean
+/*	@Bean
 	public ItemReader<ModelFile> modelFileItemReader()  throws Exception {
 
 		//List<Customer> list = customerService.findAll();
@@ -152,17 +157,17 @@ public class JobConfiguration {
 
 		//List<Customer> list = customerService.findById(iden);
 
-		/*System.out.println("__________________________________________________________________________ here hhhhhh");
+		*//*System.out.println("__________________________________________________________________________ here hhhhhh");
 
 		System.out.println(iden);
 
 		Date date = jobItemReader.getDate();
 
-		System.out.println(date);*/
+		System.out.println(date);*//*
 
 
 
-		/*return new ItemReader<ModelFile>() {
+		*//*return new ItemReader<ModelFile>() {
 			@Override
 			public ModelFile read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
 				List<Book> listBook = bookService.findAll();
@@ -180,26 +185,14 @@ public class JobConfiguration {
 				modelFile.setListTheme(listTheme);
 				return modelFile;
 			}
-		};*/
-		List<Book> listBook = bookService.findAll();
-		List<BookCategory> listBookCategory= bookCategoryService.findAll();
-		List<Theme> listTheme = themeService.findAll();
-		List<Auteur> listAuteur = auteurService.findAll();
-
-		ModelFile modelFile = new ModelFile();
-
-		System.out.println("________________________________________________________________________________________");
-
-		modelFile.setListAuteur(listAuteur);
-		modelFile.setListBook(listBook);
-		modelFile.setListBookCategory(listBookCategory);
-		modelFile.setListTheme(listTheme);
+		};*//*
 
 
 
-	ModelFileItemReader modelFileItemReader= new ModelFileItemReader();
 
-	modelFileItemReader.setModelFile(modelFile);
+	//ModelFileItemReader modelFileItemReader= new ModelFileItemReader();
+
+
 
 	modelFileItemReader.initialize();
 
@@ -207,7 +200,14 @@ public class JobConfiguration {
 
 	return  modelFileItemReader;
 
+	}*/
 
+	@Bean
+	public ItemReader<ModelFile> modelFileItemReader()  throws Exception {
+
+		modelFileItemReader.initialize();
+
+		return  modelFileItemReader;
 
 	}
 
@@ -243,19 +243,24 @@ public class JobConfiguration {
 		itemWriter.setResource(new FileSystemResource(bookOutputPath));
 		//itemWriter.toString();
 
-		itemWriter.afterPropertiesSet();
+		//itemWriter.afterPropertiesSet();
 
 		return itemWriter;
 	}
 
 	@Bean
 	public Marshaller marshaller() {
-		XStreamMarshaller marshaller = new XStreamMarshaller();
+		//XStreamMarshaller marshaller = new XStreamMarshaller();
 
-		Map<String, Class> aliases = new HashMap<>();
-		aliases.put("classeModele", ModelFile.class);
+		Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
 
-		marshaller.setAliases(aliases);
+		marshaller.setClassesToBeBound(ModelFile.class);
+
+
+		/*Map<String, Class> aliases = new HashMap<>();
+		aliases.put("MODELCLASS", ModelFile.class);
+
+		marshaller.setAliases(aliases);*/
 
 		return marshaller;
 	}
@@ -293,6 +298,9 @@ public class JobConfiguration {
 	public StaxEventItemReader<Book> bookItemReader2()  throws  Exception {
 
 		XStreamMarshaller unmarshaller = new XStreamMarshaller();
+
+
+		System.out.println("GRGRGDFVVFGBVFGBFGBFGBFGGGGGGGGGGGBDFBDB");
 
 
 

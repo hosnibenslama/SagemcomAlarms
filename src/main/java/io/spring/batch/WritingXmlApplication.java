@@ -10,14 +10,13 @@ import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteExcep
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-@ComponentScan("io.spring.batch")
+
 public class WritingXmlApplication {
 
     final static Logger logger = Logger.getLogger("WritingXmlApplication");
