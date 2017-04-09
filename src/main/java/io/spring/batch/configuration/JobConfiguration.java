@@ -16,8 +16,8 @@
 package io.spring.batch.configuration;
 
 import io.spring.batch.domain.*;
-import io.spring.batch.reader.InMemoryStudentReader;
 import io.spring.batch.reader.JobItemReader;
+import io.spring.batch.reader.ModelFileItemReader;
 import io.spring.batch.services.*;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -181,9 +181,31 @@ public class JobConfiguration {
 				return modelFile;
 			}
 		};*/
+		List<Book> listBook = bookService.findAll();
+		List<BookCategory> listBookCategory= bookCategoryService.findAll();
+		List<Theme> listTheme = themeService.findAll();
+		List<Auteur> listAuteur = auteurService.findAll();
+
+		ModelFile modelFile = new ModelFile();
+
+		System.out.println("________________________________________________________________________________________");
+
+		modelFile.setListAuteur(listAuteur);
+		modelFile.setListBook(listBook);
+		modelFile.setListBookCategory(listBookCategory);
+		modelFile.setListTheme(listTheme);
 
 
-	return new InMemoryStudentReader();
+
+	ModelFileItemReader modelFileItemReader= new ModelFileItemReader();
+
+	modelFileItemReader.setModelFile(modelFile);
+
+	modelFileItemReader.initialize();
+
+
+
+	return  modelFileItemReader;
 
 
 

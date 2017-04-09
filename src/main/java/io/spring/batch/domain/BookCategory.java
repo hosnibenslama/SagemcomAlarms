@@ -5,7 +5,6 @@ package io.spring.batch.domain;
  */
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlTransient;
 import java.util.List;
 
 @Entity
@@ -57,7 +56,6 @@ public class BookCategory {
     }
 
     @OneToMany(fetch = FetchType.EAGER,mappedBy = "bookCategory", cascade = CascadeType.ALL)
-    @XmlTransient
     public List<Book> getBooks() {
         return books;
     }
