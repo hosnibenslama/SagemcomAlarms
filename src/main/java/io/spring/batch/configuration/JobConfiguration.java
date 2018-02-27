@@ -16,6 +16,7 @@
 package io.spring.batch.configuration;
 
 import io.spring.batch.domain.*;
+import io.spring.batch.services.AlarmService;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -31,6 +32,7 @@ import org.springframework.batch.item.xml.StaxEventItemReader;
 import org.springframework.batch.item.xml.StaxEventItemWriter;
 import org.springframework.batch.support.transaction.ResourcelessTransactionManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
@@ -41,6 +43,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.oxm.xstream.XStreamMarshaller;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import javax.annotation.Resource;
 import java.io.File;
 import java.util.HashMap;
 import java.util.List;
@@ -60,6 +63,11 @@ public class JobConfiguration {
 
 	@Autowired
 	public StepBuilderFactory stepBuilderFactory;
+
+	@Autowired
+	@Qualifier("alarmServiceImpl")
+	public AlarmService alarmService;
+
 
 
 
@@ -113,9 +121,8 @@ public class JobConfiguration {
 		return new ItemWriter<Alarm>() {
 			@Override
 			public void write(List<? extends Alarm> list) throws Exception {
-
+				alarmService.generateFileOfAlarms((List<Alarm>) list);
 			}
-
 		};
 
 
