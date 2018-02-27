@@ -1,8 +1,10 @@
 package io.spring.batch.reader;
 
 import org.springframework.batch.item.ItemReader;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,8 +18,8 @@ public class JobItemReader<T> implements ItemReader<T> {
 
     private  Iterator<T> data;
 
-
-  /*  @Value("#{jobParameters['identifiant']}")
+/*
+    @Value("#{jobParameters['identifiant']}")
     private Long id;
 
     @Value("#{jobParameters['date']}")
@@ -26,24 +28,6 @@ public class JobItemReader<T> implements ItemReader<T> {
     public JobItemReader(){
 
     }
-
-   /* public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public  Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-       this.id = id;
-    }*/
-
-
 
     public JobItemReader(List<T> data) {
         this.data = data.iterator();

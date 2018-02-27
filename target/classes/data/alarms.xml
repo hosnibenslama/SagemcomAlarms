@@ -1,0 +1,2082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alarms>
+  <dc>
+
+  <!-- La liste des alarmes DC scheduler events-->
+  <!--task_response rejected reasons-->
+  <alarm>
+      <messageType>0x01000003</messageType>
+      <code>1</code>
+      <description>Task Syntax Error</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TASK_SYNTAX_ERROR</codeCIS>
+    </alarm>
+    
+    <alarm>
+      <messageType>0x01000003</messageType>
+      <code>4</code>
+      <description>TASK STORAGE FAILURE</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TASK_STORAGE_FAILURE</codeCIS>
+    </alarm>
+    
+    <alarm>
+      <messageType>0x01000003</messageType>
+      <code>5</code>
+      <description>TASK SCHEDULE FAILURE</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_TASK_SCHEDULE_FAILURE</codeCIS>
+    </alarm>
+    
+    <alarm>
+      <messageType>0x01000003</messageType>
+      <code>6</code>
+      <description>TASK SCHEDULE FULL</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_TASK_SCHEDULER_FULL</codeCIS>
+    </alarm>
+    
+    <alarm>
+      <messageType>0x01000003</messageType>
+      <code>7</code>
+      <description>TASK INTERNAL ERROR</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TASK_INTERNAL_ERROR</codeCIS>
+    </alarm>
+    
+    <alarm>
+      <messageType>0x01000003</messageType>
+      <code>8</code>
+      <description>TASK ALREADY EXISTS</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TASK_ALREADY_EXISTS</codeCIS>
+    </alarm>
+    
+    <alarm>
+      <messageType>0x01000003</messageType>
+      <code>9</code>
+      <description>TASK LIMIT EXCEEDED</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_TASK_LIMIT_EXCEEDED</codeCIS>
+    </alarm>
+    
+    <alarm>
+      <messageType>0x01000003</messageType>
+      <code>A</code>
+      <description>TASK RECOVERY NOT ALLOWED</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TASK_RECOVERY_NOT_ALLOWED</codeCIS>
+    </alarm>
+    
+    <!-- La liste des alarmes DC configuration events-->
+    <!--event_report relative au device-->
+  <alarm>
+      <messageType>0x01010001</messageType>
+      <code>1</code>
+      <description>Telechargement de la configuration impossible</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_CFG_DOWNLOAD_FAILURE</codeCIS>
+    </alarm>
+    
+    <!--event_report relative au device-->
+    <alarm>
+      <messageType>0x01010001</messageType>
+      <code>2</code>
+      <description>Pas de configuration disponible (refus du serveur de configuration)</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_CFG_CONFIG_DENIED_BY_SERVER</codeCIS>
+    </alarm>
+   
+   <!-- La liste des alarmes DC devices events-->
+    <!--event_report_from_dc 1-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>1</code>
+      <description>Alarme generee par le Logiciel de Base lors du passage dun compteur à l’état NON_ASSOCIE car aucune communication n a pu etre etablie avec ce dernier depuis le delai Lost_Alarm_Timeout.</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_LOST</codeCIS>
+    </alarm>
+    
+      <!--event_report_from_dc 2-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>2</code>
+      <description>echec de la mise jour de l'heure</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_SET_TIME_FAILED</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 3-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>3</code>
+      <description>Failed to join the PAN</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_DISCOVERY_FAILURE</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 4-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>4</code>
+      <description>Erreur de lecture des informations d'initialisation</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_INIT_GET_FAILURE</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 5-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>5</code>
+      <description>Authentication rejected in case of PLC security</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_AUTHENTICATION_FAILURE</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 6-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>6</code>
+      <description>Le Logiciel de Base a detecte lors d'une communication avec le compteur associe que la valeur du champ Frame Counter; de l'APDU recue est inferieure a la valeur du compteur local maintenu par le concentrateur</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_FRAME_COUNTER_ERROR</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 7-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>7</code>
+      <description>Le compteur associe a cette alarme a pris en compte une nouvelle GUEK (Global Unicast Encryption Key) sur l'interface P3</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_MGT_GUEK_P3</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 8-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>8</code>
+      <description>DISCOVERY_SUCCESS</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_DISCOVERY_SUCCESS</codeCIS>
+    </alarm>
+    
+            <!--event_report_from_dc 9-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>9</code>
+      <description>Erreur de lecture des informations d'initialisation</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_INIT_GET_FAILURE</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 13-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>13</code>
+      <description>Alarme generee par le Logiciel de Base lors de la fin du blacklistage d un compteur</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_BLACKLISTING_END</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 14-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>14</code>
+      <description>Le compteur associe a cette alarme a quitte le PAN de sa propre initiative</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_DEPARTURE</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 15-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>15</code>
+      <description>Alarme genere par le Logiciel de Base lors du passage dun compteur a lөtat DISPONIBLE</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_AVAILABLE</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 16-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>16</code>
+      <description>Alarme generee par le Logiciel de Base lors du passage dun compteur lөtat DISPARU</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_VANISHED</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 17-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>17</code>
+      <description>Mise ࡪour du contexte de secrite pour un compteur</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_SECURITY_CONTEXT_UPDATED</codeCIS>
+    </alarm>
+    
+        <!--event_report_from_dc 30-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>30</code>
+      <description>Essai d'authentification d'un compteur rejete non trouve aupres du serveur d'authentification)</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_REJECTED_METER</codeCIS>
+    </alarm>
+    
+      <!--event_report_from_dc 31-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>31</code>
+      <description>Essai d'authentification d'un compteur blacklist</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_BLACKLISTED_METER</codeCIS>
+    </alarm>
+         <!--event_report_from_dc 32-->
+      <alarm>
+      <messageType>0x01010003</messageType>
+      <code>32</code>
+      <description>EVT CLOCK DEVIATION TOO HIGH</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_CLOCK_DEVIATION_TOO_HIGH</codeCIS>
+    </alarm>
+    <!--event_report_from_dc 40-->
+    <alarm>
+      <messageType>0x01010003</messageType>
+      <code>40</code>
+      <description>EVT_K_C_PSK_UNWRAP_ERROR</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_PSK_UNWRAP_ERROR</codeCIS>
+    </alarm>
+    <!--event_report_from_dc 41-->
+    <alarm>
+      <messageType>0x01010003</messageType>
+      <code>41</code>
+      <description>EVT_K_C_GK_UNWRAP_ERROR</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_C_GK_UNWRAP_ERROR</codeCIS>
+    </alarm>
+    <!-- La liste des alarmes DC events-->
+    <!--event_report_dc_manager 1-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>1</code>
+      <description>Le capot du concentrateur a ete retire</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TOP_COVER_REMOVED</codeCIS>
+    </alarm>
+     
+     <!--event_report_dc_manager 2-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>2</code>
+      <description>Le couvre-borne du concentrateur a ete retire</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TERMINAL_COVER_REMOVED</codeCIS>
+    </alarm>
+    
+      <!--event_report_dc_manager 3-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>3</code>
+      <description>Alarme generee par le Logiciel de Base lorsque de lactivitee apparait sur linterface USB (passage de la valeur 1 a 0 du bit 10 du mot detat InputState; retournee par la methode _K_GetInputState)</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_USB_ACTIVITY</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 4-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>4</code>
+      <description>Alarme generee par le Logiciel de Base lorsque de lactivitee disapparait sur linterface USB (passage de la valeur 1 a 0 du bit 10 du mot detat InputState; retournee par la methode _K_GetInputState)</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_USB_INACTIVITY</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 5-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>5</code>
+      <description>Alarme generee par le Logiciel de Base lorsquill desctive automatiquement linterface USB</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_USB_AUTOMATIC_DEACTIVATION</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 6-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>6</code>
+      <description>Apres authentification, une connexion a ete etablie sur linterface locale</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_ILOC_CONX_STARTED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 7-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>7</code>
+      <description>Echec dauthentification sur linterface locale</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_ILOC_CONX_FAILED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 8-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>8</code>
+      <description>La charge CPU a atteint un seuil critique</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_SYS_CPU_OVERLOADED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 9-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>9</code>
+      <description>La quantite memire volatile disponible a atteint un seuil critique</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_SYS_VOL_MEM_LOW_LEVEL</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager A-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>A</code>
+      <description>La quantite memoire non volatile disponible a atteint un seuil critique</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_SYS_NOVOL_MEM_LOW_LEVEL</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager B-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>B</code>
+      <description>Batterie faible</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_BATTERY_LOW_LEVEL</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager C-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>C</code>
+      <description>Horloge RTC defectueuse</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_CLOCK_FAILED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager D-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>D</code>
+      <description>Anomalie de communication avec le modem CPL</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_PLC_MODEM_FAILED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager E-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>E</code>
+      <description>pobleme de sauvegarde</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_SYS_MEM_ACCESS</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager F-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>F</code>
+      <description>Le concentrateur a detecte un autre PAN dans le voisinage. Le champ MACExtendedAddress de sysAlarmCallback permet de remonter la valeur du PAN_Id detecte en hexa. Par exemple avec un PAN_Id valant 0xFCFF, la valeur du champ MACExtendedAddress; est 0x000000000000FCF</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_ALTERNATE_PAN_ID_DETECTION</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 10-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>10</code>
+      <description>retournee par wan1ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN1_OK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 11-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>11</code>
+      <description>retournee par wan1ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN1_NETWORK_DISCONNECTION</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 12 -->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>12</code>
+      <description>retournee par wan1ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN1_DISCONNECTION_EXECUTED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 13-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>13</code>
+      <description>retournee par wan1ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN1_HEART_BEAT_TIMEOUT</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 14-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>14</code>
+      <description>retournee par wan1ConnectionStateCallback()</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_WAN1_CONFIGURATION_ERROR</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 15-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>15</code>
+      <description>retournee par wan1ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN1_WAN_ERROR</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 16-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>16</code>
+      <description>WAN1_NOT_CONNECTED</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_WAN1_NOT_CONNECTED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 17-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>17</code>
+      <description>WAN1_MODEM_NOT_STARTED</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_WAN1_MODEM_NOT_STARTED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 18-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>18</code>
+      <description>WAN1_NO_MODEM</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN1_NO_MODEM</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 19-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>19</code>
+      <description>WAN1_INTERFACE_ALREADY_START</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_WAN1_INTERFACE_ALREADY_START</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 1A-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>1A</code>
+      <description>WAN1_INTERNAL_ERROR</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_WAN1_INTERNAL_ERROR</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 1B-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>1B</code>
+      <description>retournee par Wan2ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN2_OK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 1C-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>1C</code>
+      <description>retournee par Wan2ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN2_NETWORK_DISCONNECTION</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 1D-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>1D</code>
+      <description>retournee par Wan2ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN2_DISCONNECTION_EXECUTED</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 1E-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>1E</code>
+      <description>retournee par Wan2ConnectionStateCallback()</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_WAN2_CONFIGURATION_ERROR</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 1F-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>1F</code>
+      <description>retournee par Wan2ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN2_NO_DHCP_FOUND</codeCIS>
+    </alarm> 
+    
+    <!--event_report_dc_manager 20-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>20</code>
+      <description>retournee par Wan2ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN2_DHCP_SERVER_START_FAILED</codeCIS>
+    </alarm> 
+    
+    <!--event_report_dc_manager 21-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>21</code>
+      <description>retournee par Wan2ConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WAN2_WAN_ERROR</codeCIS>
+    </alarm> 
+    
+    <!--event_report_dc_manager 22-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>22</code>
+      <description>WAN2_INTERFACE_ALREADY_START</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_WAN2_INTERFACE_ALREADY_START</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 23-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>23</code>
+      <description>WAN2_INTERNAL_ERROR</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_WAN2_INTERNAL_ERROR</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 24-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>24</code>
+      <description>retourn?ar IlocConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_ILOC_OK</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 25-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>25</code>
+      <description>retournee par IlocConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_ILOC_NETWORK_DISCONNECTION</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 26-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>26</code>
+      <description>retournee par IlocConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_ILOC_DISCONNECTION_EXECUTED</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 27-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>27</code>
+      <description>retournee par IlocConnectionStateCallback()</description>
+      <activate>false</activate>
+      <codeCIS>EVT_K_ILOC_CONFIGURATION_ERROR</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 28-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>28</code>
+      <description>retournee par IlocConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_ILOC_NO_DHCP_FOUND</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 29-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>29</code>
+      <description>retournee par IlocConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_ILOC_DHCP_SERVER_START_FAILED</codeCIS>
+    </alarm>
+    
+     <!--event_report_dc_manager 2A-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>2A</code>
+      <description>retournee par IlocConnectionStateCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_ILOC_ERROR</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 2B-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>2B</code>
+      <description>retournee par sys_K_SynchroDateTimeCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_NTP_OK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 2C-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>2C</code>
+      <description>retournee par sys_K_SynchroDateTimeCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_NTP_SERVER_TIMEOUT</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 2D-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>2D</code>
+      <description>retournee par sys_K_SynchroDateTimeCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_NTP_SERVER_UNREACHABLE</codeCIS>
+    </alarm>
+        
+    <!--event_report_dc_manager 2E-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>2E</code>
+      <description>retournee par sys_K_SynchroDateTimeCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_NTP_SERVER_AUTH_FAILED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 2F-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>2F</code>
+      <description>retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_FIRST_REBOOT</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 30-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>30</code>
+      <description>Coupure dalimentation principal:retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_POWERCUT</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 31-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>31</code>
+      <description>Watchdog FW (Soft reset):retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WATCHDOG_FW</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 32-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>32</code>
+      <description>Watchdog WEB (Soft reset):retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WATCHDOG_WEB</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 33-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>33</code>
+      <description>WATCHDOG_API_JVM (Soft reset):retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WATCHDOG_API_JVM</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 34-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>34</code>
+      <description>mise a jour:retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_UPGRADE</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 35-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>35</code>
+      <description>Retour arriere:retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_ROLLBACK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 36-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>36</code>
+      <description>Demandee par sys_K_Reboot en mode normal:retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_REBOOT_NORMAL</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 37-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>37</code>
+      <description>Demandee par sys_K_Reboot en mode usine:retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_REBOOT_FACTORY</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 38-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>38</code>
+      <description>Watchdog OS (Hard reset):retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WATCHDOG_OS</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 39-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>39</code>
+      <description>Power Fail:retournee par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_POWER_FAILURE</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 3A-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>3A</code>
+      <description>Power Rescue:retourner par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_RESCUE_POWER</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 3B-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>3B</code>
+      <description>Power OK:retourner par SysRestartCallback()</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_POWER_OK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 3C-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>3C</code>
+      <description>Certification Almost EXPIRED</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_CERTIFALMOSTEXPIRED</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 3D-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>3D</code>
+      <description>PRESENCE_SERVER_ERROR</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PRESENCE_SERVER_ERROR</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 3E-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>3E</code>
+      <description>JMS_SERVER_ERROR</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_JMS_SERVER_ERROR</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 3F-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>3F</code>
+      <description>BUDS_SERVER_ERROR</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_BUDS_SERVER_ERROR</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 40-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>40</code>
+      <description>WSO_SERVER_ERROR</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WSO_SERVER_ERROR</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 41-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>41</code>
+      <description>PLC_FAILURE</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PLC_FAILURE</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 42-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>42</code>
+      <description>PRESENCE_SERVER_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PRESENCE_SERVER_OK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 43-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>43</code>
+      <description>PHASE2_MISSING</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_JMS_SERVER_OK</codeCIS>
+    </alarm>
+    
+       <!--event_report_dc_manager 44-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>44</code>
+      <description>BUDS_SERVER_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_BUDS_SERVER_OK</codeCIS>
+    </alarm>
+    
+           <!--event_report_dc_manager 45-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>45</code>
+      <description>WSO_SERVER_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WSO_SERVER_OK</codeCIS>
+    </alarm>
+
+     <!--event_report_dc_manager 46-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>46</code>
+      <description>PLC_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PLC_OK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 47-->
+      <alarm>
+      <messageType>0x01020002</messageType>
+      <code>47</code>
+      <description>PHASE1_MISSING</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PHASE1_MISSING</codeCIS>
+    </alarm> 
+    
+    <!--event_report_dc_manager 48-->
+       <alarm>
+      <messageType>0x01020002</messageType>
+      <code>48</code>
+      <description>PHASE2_MISSING</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PHASE2_MISSING</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 49-->
+       <alarm>
+      <messageType>0x01020002</messageType>
+      <code>49</code>
+      <description>PHASE3_MISSING</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PHASE3_MISSING</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 4A-->
+           <alarm>
+      <messageType>0x01020002</messageType>
+      <code>4A</code>
+      <description>PHASE1_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PHASE1_OK</codeCIS>
+    </alarm>
+    
+      <!--event_report_dc_manager 4B-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>4B</code>
+      <description>PHASE2_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PHASE2_OK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 4C-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>4C</code>
+      <description>PHASE3_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_PHASE3_OK</codeCIS>
+    </alarm>
+
+<!--event_report_dc_manager 4D-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>4D</code>
+      <description>CFG_DOWNLOAD_FAILURE</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_CFG_DOWNLOAD_FAILURE</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 4E-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>4E</code>
+      <description>WEBGUI_AUTHENTICATION_FAILURE</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WEBGUI_AUTHENTICATION_FAILURE</codeCIS>
+    </alarm>
+    
+           <!--event_report_dc_manager 4F-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>4F</code>
+      <description>SSH_AUTHENTICATION_FAILURE</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_SSH_AUTHENTICATION_FAILURE</codeCIS>
+    </alarm>
+    
+         <!--event_report_dc_manager 50-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>50</code>
+      <description>EVT_K_SSH_AUTHENTICATION_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_WEBGUI_AUTHENTICATION_OK</codeCIS>
+    </alarm>
+    
+         <!--event_report_dc_manager 51-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>51</code>
+      <description>SSH_AUTHENTICATION_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_SSH_AUTHENTICATION_OK</codeCIS>
+    </alarm>
+    
+       <!--event_report_dc_manager 52-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>52</code>
+      <description>FW_DOWNLOAD_FAILURE</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_FW_DOWNLOAD_FAILURE</codeCIS>
+    </alarm>
+    
+      <!--event_report_dc_manager 53-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>53</code>
+      <description>CERTIFICATE_UPDATE_FAILURE</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_CERTIFICATE_UPDATE_FAILURE</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 54-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>54</code>
+      <description>CERTIFICATE_UPDATE_OK</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_CERTIFICATE_UPDATE_OK</codeCIS>
+    </alarm>
+    
+    <!--event_report_dc_manager 55-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>55</code>
+      <description>TOP_COVER_CLOSED</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TOP_COVER_CLOSED</codeCIS>
+    </alarm>
+    
+       <!--event_report_dc_manager 56-->
+          <alarm>
+      <messageType>0x01020002</messageType>
+      <code>56</code>
+      <description>TERMINAL_COVER_CLOSED</description>
+      <activate>true</activate>
+      <codeCIS>EVT_K_TERMINAL_COVER_CLOSED</codeCIS>
+    </alarm>
+    
+   <!--Alarme remontE suite a reception du message de la queue "presence" avec un statut absent-->
+  <alarm>
+      <messageType>presence</messageType>
+      <code>333</code>
+      <description>DC is unreachable, it did not connect as expected</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESPLC_DC_LOST</codeCIS>
+    </alarm>
+    
+     <!--Alarme DC reacheable again-->
+  <alarm>
+      <messageType>presence</messageType>
+      <code>332</code>
+      <description>DC is reachable again</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESPLC_DC_OK</codeCIS>
+    </alarm>
+   
+     </dc> 
+     
+  <device>
+
+     <!--Liste des alarmes de type event_report_dcevice-->
+     <!-- ALARM REGISTER 1-->
+      <alarm>
+       <messageType>0x01010002</messageType>
+      <description>clock invalid</description>
+      <activate>true</activate>
+      <maskValue>00000001</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_INVALIDCLOCK</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Battery replace</description>
+      <activate>true</activate>
+      <maskValue>00000002</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_BATTERYREPLACE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+  
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Program memory error</description>
+      <activate>true</activate>
+      <maskValue>00000100</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_PROGMEMERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>RAM error</description>
+      <activate>true</activate>
+      <maskValue>00000200</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_RAMERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>NV memory error</description>
+      <activate>true</activate>
+      <maskValue>00000400</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_NVRAMERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Measurement system error</description>
+      <activate>true</activate>
+      <maskValue>00000800</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_MEASERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Watchdog error</description>
+      <activate>true</activate>
+      <maskValue>00001000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_WATCHDOG</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Fraud attempt</description>
+      <activate>true</activate>
+      <maskValue>00002000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_FRAUDATTEMPT</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <!-- ALARM REGISTER 1: M-Bus Channel communication errors-->
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus communication error ch1</description>
+      <activate>true</activate>
+      <maskValue>00010000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_MBUSCOMMERRORCH1</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus communication error ch2</description>
+      <activate>true</activate>
+      <maskValue>00020000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_MBUSCOMMERRORCH2</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+      <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus communication error ch3</description>
+      <activate>true</activate>
+      <maskValue>00040000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_MBUSCOMMERRORCH3</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus communication error ch4</description>
+      <activate>true</activate>
+      <maskValue>00080000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_C_MBUSCOMMERRORCH4</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <!-- ALARM REGISTER 1: M-Bus Fraud errors-->
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus fraud attempt ch1</description>
+      <activate>true</activate>
+      <maskValue>00100000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH1_FRAUD</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+      <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus fraud attempt ch2</description>
+      <activate>true</activate>
+      <maskValue>00200000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH2_FRAUD</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus fraud attempt ch3</description>
+      <activate>true</activate>
+      <maskValue>00400000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH3_FRAUD</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus fraud attempt ch4</description>
+      <activate>true</activate>
+      <maskValue>00800000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH4_FRAUD</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <!-- ALARM REGISTER 1: Permanent errors on M-Bus Channels-->
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Permanent error M-Bus ch1</description>
+      <activate>true</activate>
+      <maskValue>01000000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH1_PERMERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Permanent error M-Bus ch2</description>
+      <activate>true</activate>
+      <maskValue>02000000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH2_PERMERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Permanent error M-Bus ch3</description>
+      <activate>true</activate>
+      <maskValue>04000000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH3_PERMERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Permanent error M-Bus ch4</description>
+      <activate>true</activate>
+      <maskValue>08000000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH4_PERMERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <!-- ALARM REGISTER 1: Battery low on M-Bus Channels-->
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Battery low on M-Bus ch1</description>
+      <activate>true</activate>
+      <maskValue>10000000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH1_BATTERYLOW</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Battery low on M-Bus ch2</description>
+      <activate>true</activate>
+      <maskValue>20000000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH2_BATTERYLOW</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Battery low on M-Bus ch3</description>
+      <activate>false</activate>
+      <maskValue>40000000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH3_BATTERYLOW</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Battery low on M-Bus ch4</description>
+      <activate>true</activate>
+      <maskValue>80000000</maskValue>
+      <instanceId>0;0;97;98;20;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH4_BATTERYLOW</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+     <!-- ALARM REGISTER 2-->
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Total Power Failure</description>
+      <activate>true</activate>
+      <maskValue>00000001</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_POWERFAILURE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Power Resume</description>
+      <activate>true</activate>
+      <maskValue>00000002</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_POWERRESUME</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Voltage Phase Failure L1</description>
+      <activate>true</activate>
+      <maskValue>00000004</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_VOLTL1FAILURE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Voltage Phase Failure L2</description>
+      <activate>true</activate>
+      <maskValue>00000008</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_VOLTL2FAILURE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Voltage Phase Failure L3</description>
+      <activate>true</activate>
+      <maskValue>00000010</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_VOLTL3FAILURE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Voltage Phase Resume L1</description>
+      <activate>true</activate>
+      <maskValue>00000020</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_VOLTL1RESUME</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Voltage Phase Resume L2</description>
+      <activate>true</activate>
+      <maskValue>00000040</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_VOLTL2RESUME</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Voltage Phase Resume L3</description>
+      <activate>true</activate>
+      <maskValue>00000080</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_VOLTL3RESUME</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Missing Neutral</description>
+      <activate>true</activate>
+      <maskValue>00000100</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_MISSINGNEUTRAL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Phase Asymmetry</description>
+      <activate>true</activate>
+      <maskValue>00000200</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_PHASEASSYMETRY</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Current Reversal</description>
+      <activate>true</activate>
+      <maskValue>00000400</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_CURRENTREVERSAL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Wrong Phase Sequence</description>
+      <activate>true</activate>
+      <maskValue>00000800</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_WRONGPHASESEQ</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Unexpected Consumption</description>
+      <activate>true</activate>
+      <maskValue>00001000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_UNEXPECTCONSPT</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Key Exchanged</description>
+      <activate>true</activate>
+      <maskValue>00002000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_KEYXCHANGED</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Bad Voltage Quality L1</description>
+      <activate>true</activate>
+      <maskValue>00004000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_BADVOLTL1QUAL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Bad Voltage Quality L2</description>
+      <activate>true</activate>
+      <maskValue>00008000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_BADVOLTL2QUAL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Bad Voltage Quality L3</description>
+      <activate>true</activate>
+      <maskValue>00010000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_BADVOLTL3QUAL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>External Alert</description>
+      <activate>true</activate>
+      <maskValue>00020000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_EXTERNALALERT</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>Local communication attempt</description>
+      <activate>true</activate>
+      <maskValue>00040000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_LOCALCOMM</codeCIS>
+       <classId>1</classId>
+    </alarm>
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>New M-Bus  Device Installed Ch1</description>
+      <activate>true</activate>
+      <maskValue>00080000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH1_INSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>New M-Bus  Device Installed Ch2</description>
+      <activate>true</activate>
+      <maskValue>00100000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH2_INSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>New M-Bus  Device Installed Ch3</description>
+      <activate>true</activate>
+      <maskValue>00200000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH3_INSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>New M-Bus  Device Installed Ch4</description>
+      <activate>true</activate>
+      <maskValue>00400000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH4_INSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus valve alarm  Ch1</description>
+      <activate>true</activate>
+      <maskValue>08000000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH1_VALVE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus valve alarm  Ch2</description>
+      <activate>true</activate>
+      <maskValue>10000000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH2_VALVE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus valve alarm  Ch3</description>
+      <activate>true</activate>
+      <maskValue>20000000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH3_VALVE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+     <alarm>
+     <messageType>0x01010002</messageType>
+      <description>M-Bus valve alarm  Ch4</description>
+      <activate>true</activate>
+      <maskValue>40000000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH4_VALVE</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+     <messageType>0x01010002</messageType>
+      <description>Disconnect/Reconnect Failure</description>
+      <activate>true</activate>
+      <maskValue>80000000</maskValue>
+      <instanceId>0;0;97;98;21;255</instanceId>
+	   <codeCIS>EVT_C_DISCRECONNFAIL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+  
+     <!-- ALARM REGISTER 3-->
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus comm. error dongle 1</description>
+      <activate>true</activate>
+      <maskValue>00000001</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_DG1_COMMERR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus comm. error dongle 2</description>
+      <activate>true</activate>
+      <maskValue>00000002</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_DG2_COMMERR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>New M-Bus installed dongle 1</description>
+      <activate>true</activate>
+      <maskValue>00000004</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_DG1_INSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+     <alarm>
+       <messageType>0x01010002</messageType>
+      <description>New M-Bus installed dongle 2</description>
+      <activate>true</activate>
+      <maskValue>00000008</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_DG2_INSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus device uninstalled ch1</description>
+      <activate>true</activate>
+      <maskValue>00000010</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH1_UNINSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus device uninstalled ch2</description>
+      <activate>true</activate>
+      <maskValue>00000020</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH2_UNINSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus device uninstalled ch3</description>
+      <activate>true</activate>
+      <maskValue>00000040</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH3_UNINSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+      <alarm>
+       <messageType>0x01010002</messageType>
+      <description>M-Bus device uninstalled ch4</description>
+      <activate>true</activate>
+      <maskValue>00000080</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH4_UNINSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+   
+    
+    <!-- ALARM REGISTER 3-->
+    <alarm>
+     <messageType>0x01010002</messageType>
+      <description>M-Bus uninstalled dongle 1</description>
+      <activate>true</activate>
+      <maskValue>00000100</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_DG1_UNINSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+     <messageType>0x01010002</messageType>
+      <description>M-Bus uninstalled dongle 2</description>
+      <activate>true</activate>
+      <maskValue>00000200</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_DG2_UNINSTALL</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+     <messageType>0x01010002</messageType>
+      <description>Temporary error M-Bus ch1</description>
+      <activate>true</activate>
+      <maskValue>00000400</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH1_TMPERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+     <messageType>0x01010002</messageType>
+      <description>Temporary error M-Bus ch2</description>
+      <activate>true</activate>
+      <maskValue>00000800</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH2_TMPERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+     <messageType>0x01010002</messageType>
+      <description>Temporary error M-Bus ch3</description>
+      <activate>true</activate>
+      <maskValue>00001000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH3_TMPERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+     <messageType>0x01010002</messageType>
+      <description>Temporary error M-Bus ch4</description>
+      <activate>true</activate>
+      <maskValue>00002000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_CMBUS_CH4_TMPERROR</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <alarm>
+     <messageType>0x01010002</messageType>
+      <description>End of fraud attempt</description>
+      <activate>true</activate>
+      <maskValue>00004000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_C_ENDFRAUDATTEMPT</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+ <alarm>
+     <messageType>0x01010002</messageType>
+      <description>Certificate almost expired</description>
+      <activate>true</activate>
+      <maskValue>00008000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_C_CERTIFALMOSTEXPIRED</codeCIS>
+       <classId>1</classId>
+    </alarm>
+     <!--new TNB alarms-->
+     <alarm>
+     <messageType>0x01010002</messageType>
+      <description>Export mode L1 start</description>
+      <activate>true</activate>
+      <maskValue>00010000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_C_EXPORTMODEL1START</codeCIS>
+       <classId>1</classId>
+    </alarm>
+	<alarm>
+     <messageType>0x01010002</messageType>
+      <description>Export mode L2 start</description>
+      <activate>true</activate>
+      <maskValue>00020000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_C_EXPORTMODEL2START</codeCIS>
+       <classId>1</classId>
+    </alarm>
+	<alarm>
+     <messageType>0x01010002</messageType>
+      <description>Export mode L3 start</description>
+      <activate>true</activate>
+      <maskValue>00040000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_C_EXPORTMODEL3START</codeCIS>
+       <classId>1</classId>
+    </alarm>
+	<alarm>
+     <messageType>0x01010002</messageType>
+      <description>Export mode L1 end</description>
+      <activate>true</activate>
+      <maskValue>00080000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_C_EXPORTMODEL1END</codeCIS>
+       <classId>1</classId>
+    </alarm>
+	<alarm>
+     <messageType>0x01010002</messageType>
+      <description>Export mode L2 end</description>
+      <activate>true</activate>
+      <maskValue>00100000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_C_EXPORTMODEL2END</codeCIS>
+       <classId>1</classId>
+    </alarm>
+	<alarm>
+     <messageType>0x01010002</messageType>
+      <description>Export mode L3 end</description>
+      <activate>true</activate>
+      <maskValue>00200000</maskValue>
+      <instanceId>0;0;97;98;22;255</instanceId>
+	   <codeCIS>EVT_C_EXPORTMODEL3END</codeCIS>
+       <classId>1</classId>
+    </alarm>
+    
+    <!--unreachablePlcDevices-->
+      <alarm>
+      <messageType>unreachablePlcDevices</messageType>
+      <code>2</code>
+      <description>M2M has detected that a plc device is not reachable anymore</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_PLCDEVICE_UNREACHABLE</codeCIS>
+    </alarm>
+    
+      <!--unreachableP2pDevices-->
+      <alarm>
+      <messageType>unreachableP2pDevices</messageType>
+      <code>1</code>
+      <description>M2M has detected that a p2p device is not reachable anymore</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_P2PDEVICE_UNREACHABLE</codeCIS>
+    </alarm>
+    
+    <!--reachableP2pDevices-->
+      <alarm>
+      <messageType>reachableP2pDevices</messageType>
+      <code>3</code>
+      <description>M2M has detected that a p2p device is reachable</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_P2PDEVICE_OK</codeCIS>
+    </alarm>
+     <!--reachablePLcDevices-->
+     <alarm>
+      <messageType>reachablePlcDevices</messageType>
+      <code>4</code>
+      <description>M2M has detected that a plc device is reachable</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_PLCDEVICE_OK</codeCIS>
+    </alarm>
+</device>
+
+<m2M>
+   <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DEVICE_UNKNOWN</code>
+      <description>device unknown</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DEVICE_UNKNOWN</codeCIS>
+    </alarm>
+    
+    <alarm>
+      <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESPLC_GBEK_PROBLEM</code>
+      <description>device plc gbek problem</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_HESPLC_GBEK_PROBLEM</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DEVICE_MISSINGKEY</code>
+      <description>device missing key</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DEVICE_MISSINGKEY</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DEVICE_EXPIREDKEY</code>
+      <description>device missing key</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DEVICE_EXPIREDKEY</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DEVICE_REVOKEDKEY</code>
+      <description>device missing key</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DEVICE_REVOKEDKEY</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DC_UNKNOWN</code>
+      <description>dc unknown</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DC_UNKNOWN</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DC_MISSINGKEY</code>
+      <description>dc missing key</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DC_MISSINGKEY</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DC_EXPIREDKEY</code>
+      <description>dc expire key</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DC_EXPIREDKEY</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DC_REVOKEDKEY</code>
+      <description>dc revoked key</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DC_REVOKEDKEY</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_DEVICE_SECURITY</code>
+      <description>kms device security</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_DEVICE_SECURITY</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_SYNTAX_REQ_FAILURE</code>
+      <description>kms syntax req failure</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_SYNTAX_REQ_FAILURE</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_SYNTAX_RES_FAILURE</code>
+      <description>kms syntax res failure</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_SYNTAX_RES_FAILURE</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_NOT_AVAILABLE</code>
+      <description>evt not available</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_NOT_AVAILABLE</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_TIMEOUT_EXPIRED</code>
+      <description>timeout expired</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_TIMEOUT_EXPIRED</codeCIS>
+    </alarm>
+    
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_KMS_WEB_SOCKET_COMM_FAILURE</code>
+      <description>web socket comm failure</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_KMS_WEB_SOCKET_COMM_FAILURE</codeCIS>
+    </alarm>
+    
+   <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESP2P_CERTIFALMOSTEXPIRED</code>
+      <description>Certificate almost expired</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_HESP2P_CERTIFALMOSTEXPIRED</codeCIS>
+    </alarm>
+    
+     <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESPLC_DEVICE_NOT_INITIALISED</code>
+      <description>DEVICE NOT INITIALISED</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_HESPLC_DEVICE_NOT_INITIALISED</codeCIS>
+    </alarm>
+    
+    <!--alarme remonte suite VSDC Overload threshold BEGIN-->
+      <alarm>
+      <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESP2P_OVERLOAD_BEGIN</code>
+      <description>HES P2P  activity is too high, above its overload threshold</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESP2P_OVERLOAD_BEGIN</codeCIS>
+    </alarm>
+    
+    <!--alarme remonte suite VSDC Overload threshold END-->
+      <alarm>
+      <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESP2P_OVERLOAD_END</code>
+      <description>HES P2P  activity is too high, above its overload threshold</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESP2P_OVERLOAD_END</codeCIS>
+    </alarm>
+    
+  <!--alarme remontée suite la découverte d'noueau P2P device-->
+      <alarm>
+      <messageType>M2M_VSDC_ALARM</messageType>
+      <code>124</code>
+      <description>HES P2P has detected a connection attempt (push) from an unknown P2P device</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESP2P_DEVICE_UNKNOWN</codeCIS>
+    </alarm>
+
+    
+       <!--P2P device missing keys-->
+      <alarm>
+      <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESP2P_DEVICE_MISSINGKEYS</code>
+      <description>HES P2P has no key for managing device security</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESP2P_DEVICE_MISSINGKEYS</codeCIS>
+    </alarm>
+    
+     <!--P2P device security issues-->
+      <alarm>
+      <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESP2P_DEVICE_SECURITY</code>
+      <description>HES P2P has a security issue with a device</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESP2P_DEVICE_SECURITY</codeCIS>
+    </alarm>
+    
+    <!--P2P device internal error-->
+      <alarm>
+      <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESP2P_INTERNAL_ERROR</code>
+      <description>HES P2P has detected an internal error</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESP2P_INTERNAL_ERROR</codeCIS>
+    </alarm>
+    
+      <!--Alarme remont?uite ?a d?uverte d'un nouveau DC-->
+  <alarm>
+      <messageType>DC_DEC</messageType>
+      <code>1</code>
+      <description>M2M has detected an unauthorized/unknown DC connection attempt</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_HESPLC_DC_UNKNOWN</codeCIS>
+    </alarm>
+    
+    <!--Alarme M2M OverLoad Begin-->
+  <alarm>
+      <messageType>M2M_OVERLOAD_ALARM</messageType>
+      <code>EVT_M2M_OVERLOAD_BEGIN</code>
+      <description>M2M OverLoad Begin</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_OVERLOAD_BEGIN</codeCIS>
+    </alarm>
+    
+    <!--Alarme M2M OverLoad End-->
+  <alarm>
+      <messageType>M2M_OVERLOAD_ALARM</messageType>
+      <code>EVT_M2M_OVERLOAD_END</code>
+      <description>M2M OverLoad End</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_OVERLOAD_END</codeCIS>
+    </alarm>
+    
+    <!--M2M INTERNAL ERROR-->
+  	<alarm>
+      <messageType>M2M_INTERNAL_ALARM</messageType>
+      <code>EVT_M2M_INTERNAL_ERROR</code>
+      <description>M2M internal error</description>
+      <activate>true</activate>
+      <codeCIS>EVT_M2M_INTERNAL_ERROR</codeCIS>
+    </alarm>
+    
+    <!-- VSDC alarm PUSHERROR -->
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESP2P_DEVICE_PUSHERROR</code>
+      <description>VSDC alarm PUSHERROR</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_HESP2P_DEVICE_PUSHERROR</codeCIS>
+    </alarm>
+    
+    <!-- VSDC alarm PUSHTIMEOUT -->
+    <alarm>
+     <messageType>M2M_VSDC_ALARM</messageType>
+      <code>EVT_M2M_HESP2P_DEVICE_PUSHTIMEOUT</code>
+      <description>VSDC alarm PUSHTIMEOUT</description>
+      <activate>true</activate>
+	  <codeCIS>EVT_M2M_HESP2P_DEVICE_PUSHTIMEOUT</codeCIS>
+    </alarm>
+    
+</m2M>
+</alarms>
